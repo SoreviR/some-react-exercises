@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import UserCard from "./components/user-card/UserCard";
+import ButtonList from "./components/button-list/ButtonList";
+import WorldPopulation from "./components/world-population/WorldPopulation";
+import TitleLine from "./components/title-and-line/TitleLine";
+import Creditcard from "./components/creditcard/Creditcard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="flex flex-col w-full p-6 gap-8 items-center">
+      <TitleLine numEjercicio={1} />
+      <Creditcard />
+      <TitleLine numEjercicio={2} />
+      <UserCard />
+      <TitleLine numEjercicio={3} />
+      <ButtonList bottonsQuantity={31} />
+      <TitleLine numEjercicio={4} />
+      <WorldPopulation />
+    </main>
   );
 }
 
